@@ -1,0 +1,2 @@
+2023/01/19 11:15:42 {"callers":["E:/blog-server/main.go: 39 main.init.0"],"level":"info","message":"leon: blog-server","time":1674098142}
+2023/01/19 11:38:18 {"callers":["E:/blog-server/main.go: 39 main.init.0"],"level":"info","message":"leon: blog-server","time":1674099498}
