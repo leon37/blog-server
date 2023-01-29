@@ -13,6 +13,9 @@ import (
 	"time"
 )
 
+// @title Leon's Blog Server
+// @version 1.0
+// @termsOfService https://github.com/leon37/blog-server
 func main() {
 	global.Logger.Infof("%s: %s", "leon", "blog-server")
 	gin.SetMode(global.ServerSetting.RunMode)
