@@ -19,7 +19,7 @@ func (t Tag) Get(c *gin.Context) {}
 // @Param page_size query int false "每页数量"
 // @Success 200 {object} model.Tag "成功"
 // @Failure 400 {object} errcode.Error "请求错误"
-// @Failuer 500 {object} errcode.Error "内部错误"
+// @Failure 500 {object} errcode.Error "内部错误"
 // @Router /api/v1/tags [get]
 func (t Tag) List(c *gin.Context) {}
 
