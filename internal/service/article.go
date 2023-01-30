@@ -1,28 +1,31 @@
 package service
 
-type CountArticleRequest struct {
-	Name  string `form:"name" binding:"max=100"`
-	State uint8  `form:"state,default=1" binding:"oneof=0 1"`
+import (
+	"github.com/leon37/blog-server/internal/model"
+	"github.com/leon37/blog-server/internal/protocol"
+	"github.com/leon37/blog-server/pkg/app"
+)
+
+func (svc *Service) CountArticles(param *protocol.CountArticleRequest) (int, error) {
+	return svc.dao.CountArticle(param.Title, param.State)
 }
 
-type ArticleListRequest struct {
-	Name  string `form:"name" binding:"max=100"`
-	State uint8  `form:"state,default=1" binding:"oneof=0 1"`
+func (svc *Service) GetSingleArticle(param *protocol.ArticleSingleRequest) (*model.Article, error) {
+	return svc.dao.GetArticle(param.ID)
 }
 
-type CreateArticleRequest struct {
-	Name      string `form:"name" binding:"required,min=3,max=100"`
-	CreatedBy string `form:"created_by" binding:"required,min=3,max=100"`
-	State     uint8  `form:"state default=1" binding:"oneof=0 1"`
+func (svc *Service) GetArticleList(param *protocol.ArticleListRequest, pager *app.Pager) ([]*model.Article, error) {
+	return svc.dao.GetArticleList(param.Title, param.State, pager.Page, pager.PageSize)
 }
 
-type UpdateArticleRequest struct {
-	ID         uint32 `form:"id" binding:"required,gte=1"`
-	Name       string `form:"name" binding:"min=3,max=100"`
-	State      uint8  `form:"state" binding:"required,oneof=0 1"`
-	ModifiedBy string `form:"modified_by" binding:"required,min=3,max=100"`
+func (svc *Service) CreateArticle(param *protocol.CreateArticleRequest) error {
+	return svc.dao.CreateArticle(param.Title, param.Desc, param.Content, param.CoverImageUrl, param.State, param.CreatedBy)
 }
 
-type DeleteArticleRequest struct {
-	ID uint32 `form:"id" binding:"required,gte=1"`
+func (svc *Service) UpdateArticle(param *protocol.UpdateArticleRequest) error {
+	return svc.dao.UpdateArticle(param.ID, param.Title, param.Desc, param.Content, param.CoverImageUrl, param.State, param.ModifiedBy)
+}
+
+func (svc *Service) DeleteArticle(param *protocol.DeleteArticleRequest) error {
+	return svc.dao.DeleteArticle(param.ID)
 }

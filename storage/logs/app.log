@@ -11,3 +11,31 @@
 2023/01/29 15:36:08 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"error","message":"app.BindAndValid err: State必须是[0 1]中的一个","time":1674977768}
 2023/01/29 17:00:42 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1674982842}
 2023/01/29 17:16:57 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1674983817}
+2023/01/29 17:44:51 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1674985491}
+2023/01/29 17:46:02 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"error","message":"app.BindAndValid err: Name长度必须至少为3个字符,CreatedBy为必填字段","time":1674985562}
+2023/01/29 17:47:48 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1674985668}
+2023/01/29 17:50:47 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1674985847}
+2023/01/29 17:51:53 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"error","message":"app.BindAndValid err: Name长度必须至少为3个字符,CreatedBy为必填字段","time":1674985913}
+2023/01/29 17:52:33 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1674985953}
+2023/01/29 17:56:12 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"error","message":"app.BindAndValid err: Name长度必须至少为3个字符","time":1674986172}
+2023/01/29 18:04:37 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1674986677}
+2023/01/29 18:14:43 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1674987283}
+2023/01/29 18:18:30 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"error","message":"app.BindAndValid err: ID为必填字段,State为必填字段,ModifiedBy为必填字段","time":1674987510}
+2023/01/29 18:19:04 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"error","message":"app.BindAndValid err: ID为必填字段","time":1674987544}
+2023/01/29 18:22:22 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"error","message":"app.BindAndValid err: State为必填字段","time":1674987742}
+2023/01/29 18:23:34 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1674987814}
+2023/01/29 18:27:19 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1674988039}
+2023/01/29 18:27:23 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"error","message":"svc.UpdateTag err: Error 1054 (42S22): Unknown column 'names' in 'field list'","time":1674988043}
+2023/01/29 18:28:11 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"error","message":"svc.UpdateTag err: Error 1054 (42S22): Unknown column 'names' in 'field list'","time":1674988091}
+2023/01/29 18:29:47 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1674988187}
+2023/01/29 18:29:49 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"error","message":"svc.UpdateTag err: Error 1054 (42S22): Unknown column 'names' in 'field list'","time":1674988189}
+2023/01/29 18:30:47 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1674988247}
+2023/01/30 11:05:55 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1675047955}
+2023/01/30 11:06:18 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1675047978}
+2023/01/30 11:09:31 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1675048171}
+2023/01/30 13:57:41 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"error","message":"app.BindAndValid err: CoverImageUrl长度必须至少为3个字符,CreatedBy长度必须至少为3个字符","time":1675058261}
+2023/01/30 13:58:24 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1675058304}
+2023/01/30 14:05:47 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1675058747}
+2023/01/30 14:05:51 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1675058751}
+2023/01/30 14:06:18 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"error","message":"app.BindAndValid err: Content为必填字段","time":1675058778}
+2023/01/30 14:06:36 {"callers":["E:/blog-server/main.go: 42 main.init.0"],"level":"info","message":"leon: blog-server","time":1675058796}

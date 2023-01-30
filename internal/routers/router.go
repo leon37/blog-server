@@ -18,18 +18,16 @@ func NewRouter() *gin.Engine {
 	article := v1.NewArticle()
 	api := r.Group("/api/v1")
 	{
-		api.POST("/tags", tag.Create)
-		api.DELETE("/tags/:id", tag.Delete)
-		api.PUT("/tags/:id/", tag.Update)
-		api.PATCH("/tags/:id/state", tag.Update)
-		api.GET("/tags", tag.List)
+		api.POST("/tags/create", tag.Create)
+		api.POST("/tags/delete", tag.Delete)
+		api.POST("/tags/update", tag.Update)
+		api.GET("/tags/list", tag.List)
 
-		api.POST("/articles", article.Create)
-		api.DELETE("/articles/:id", article.Delete)
-		api.PUT("/articles/:id/", article.Update)
-		api.PATCH("/articles/:id/state", article.Update)
-		api.GET("/articles", article.List)
-		api.GET("/articles/:id", article.Get)
+		api.POST("/articles/create", article.Create)
+		api.POST("/articles/delete", article.Delete)
+		api.POST("/articles/update", article.Update)
+		api.GET("/articles/list", article.List)
+		api.GET("/articles/single", article.Get)
 	}
 	return r
 }

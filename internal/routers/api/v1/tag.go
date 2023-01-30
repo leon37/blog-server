@@ -17,8 +17,6 @@ func NewTag() Tag {
 	return Tag{}
 }
 
-func (t Tag) Get(c *gin.Context) {}
-
 // List
 // @Summary 获取多个标签
 // @Produce json
@@ -29,7 +27,7 @@ func (t Tag) Get(c *gin.Context) {}
 // @Success 200 {object} model.Tag "成功"
 // @Failure 400 {object} errcode.Error "请求错误"
 // @Failure 500 {object} errcode.Error "内部错误"
-// @Router /api/v1/tags [get]
+// @Router /api/v1/tags/list [get]
 func (t Tag) List(c *gin.Context) {
 	param := protocol.TagListRequest{}
 	response := app.NewResponse(c)
@@ -70,7 +68,7 @@ func (t Tag) List(c *gin.Context) {
 // @Success 200 {object} model.Tag " 成功"
 // @Failure 400 {object} errcode.Error "请求错误"
 // @Failure 500 {object} errcode.Error "内部错误"
-// @Router /api/v1/tags [post]
+// @Router /api/v1/tags/create [post]
 func (t Tag) Create(c *gin.Context) {
 	param := protocol.CreateTagRequest{}
 	response := app.NewResponse(c)
@@ -90,7 +88,7 @@ func (t Tag) Create(c *gin.Context) {
 		return
 	}
 
-	response.ToResponse(gin.H{})
+	response.ToResponse(gin.H{"message": "OK"})
 	return
 }
 
@@ -103,7 +101,7 @@ func (t Tag) Create(c *gin.Context) {
 // @Success 200 {array} model.Tag "成功"
 // @Failure 400 {object} errcode.Error "请求错误"
 // @Failure 500 {object} errcode.Error "内部错误"
-// @Router /api/v1/tags/{id} [put]
+// @Router /api/v1/tags/update [post]
 func (t Tag) Update(c *gin.Context) {
 	param := protocol.UpdateTagRequest{}
 	response := app.NewResponse(c)
@@ -123,7 +121,7 @@ func (t Tag) Update(c *gin.Context) {
 		return
 	}
 
-	response.ToResponse(gin.H{})
+	response.ToResponse(gin.H{"message": "OK"})
 	return
 }
 
@@ -133,7 +131,7 @@ func (t Tag) Update(c *gin.Context) {
 // @Success 200 {string} string "成功"
 // @Failure 400 {object} errcode.Error "请求错误"
 // @Failure 500 {object} errcode.Error "内部错误"
-// @Router /api/v1/tags/{id} [delete]
+// @Router /api/v1/tags/delete [post]
 func (t Tag) Delete(c *gin.Context) {
 	param := protocol.DeleteTagRequest{
 		ID: convert.StrTo(c.Param("id")).MustUInt32(),
@@ -155,6 +153,6 @@ func (t Tag) Delete(c *gin.Context) {
 		return
 	}
 
-	response.ToResponse(gin.H{})
+	response.ToResponse(gin.H{"message": "OK"})
 	return
 }
