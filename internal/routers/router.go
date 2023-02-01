@@ -32,6 +32,7 @@ func NewRouter() *gin.Engine {
 	r.Use(middleware.RateLimiter(methodLimiters))
 	r.Use(middleware.ContextTimeout(60 * time.Second))
 	r.Use(middleware.Translation())
+	r.Use(middleware.Tracing())
 	r.GET("/auth", api.GetAuth)
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	tag := v1.NewTag()
