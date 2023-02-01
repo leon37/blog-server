@@ -95,15 +95,15 @@ func (a Article) List(c *gin.Context) {
 }
 
 // Create
-// @Summary 新增标签
+// @Summary 新增文章
 // @Produce  json
-// @Param name body string true "标签名称" minlength(3) maxlength(100)
+// @Param title body string true "文章名称" minlength(3) maxlength(100)
 // @Param state body int false "状态" Enums(0, 1) default(1)
 // @Param created_by body string true "创建者" minlength(3) maxlength(100)
 // @Success 200 {object} model.Article " 成功"
 // @Failure 400 {object} errcode.Error "请求错误"
 // @Failure 500 {object} errcode.Error "内部错误"
-// @Router /api/v1/articles [post]
+// @Router /api/v1/articles/create [post]
 func (a Article) Create(c *gin.Context) {
 	param := protocol.CreateArticleRequest{}
 	response := app.NewResponse(c)

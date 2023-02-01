@@ -10,6 +10,13 @@ App:
   LogSavePath: storage/logs
   LogFileName: app
   LogFileExt: .log
+  UploadSavePath: storage/uploads
+  UploadServerUrl: http://127.0.0.1:8000/static
+  UploadImageMaxSize: 5 # MB
+  UploadImageAllowExts:
+    - .jpg
+    - .jpeg
+    - .png
 
 Database:
   DBType: mysql
@@ -22,3 +29,18 @@ Database:
   ParseTime: True
   MaxIdleConns: 10
   MaxOpenConns: 30
+
+JWT:
+  Secret: leon
+  Issure: blog-server
+  Expire: 7200
+
+Email:
+  Host: smtp.qq.com
+  Port: 465
+  UserName: 13368447@qq.com
+  Password: ltTTT960217,
+  IsSSL: true
+  From: 13368447@qq.com
+  To:
+    - 2199038610@qq.com
